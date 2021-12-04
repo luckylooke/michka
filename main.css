@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .content-wrap {
 	position: fixed;
 	top: 0;
@@ -21,7 +28,18 @@
 .bouquet {
 	margin: auto;
 	width: 50vw;
-	animation: cssAnimation 60s linear infinite;
+	-webkit-animation: cssAnimation 60s linear infinite;
+	        animation: cssAnimation 60s linear infinite;
+}
+
+@-webkit-keyframes cssAnimation {
+	from {
+		-webkit-transform: rotate(360deg);
+	}
+
+	to {
+		-webkit-transform: rotate(0deg);
+	}
 }
 
 @keyframes cssAnimation {
@@ -63,7 +81,8 @@
 		7px 7px 0 #fff;
 	line-height: 0.8em;
 	letter-spacing: 0.1em;
-	transform: scaleY(0.7);
+	-ms-transform: scaleY(0.7);
+	    transform: scaleY(0.7);
 	-webkit-transform: scaleY(0.7);
 	-moz-transform: scaleY(0.7);
 	margin: 0;
@@ -94,12 +113,35 @@
 
 .text2 {
 	font-size: 7vw;
-	animation: color-change 1s infinite;
+	-webkit-animation: color-change 1s infinite;
+	        animation: color-change 1s infinite;
 }
 
 .text3 {
 	font-size: 12vw;
 	margin-bottom: 3vw;
+}
+
+@-webkit-keyframes color-change {
+	0% {
+		color: rgb(255, 0, 234);
+	}
+
+	20% {
+		color: rgb(0, 217, 255);
+	}
+
+	40% {
+		color: rgb(174, 0, 255);
+	}
+
+	60% {
+		color: rgb(0, 255, 213);
+	}
+
+	100% {
+		color: rgb(255, 0, 234);
+	}
 }
 
 @keyframes color-change {
@@ -135,7 +177,8 @@
 .fun>.item {
 	margin-top: 20vh;
 	position: relative;
-	box-shadow: 2vw 2vw 5vw 1vw rgba(0, 0, 0, 0.657), inset 2vw 2vw 5vw 1vw rgba(255, 255, 255, 0.6), inset -2vw -2vw 5vw 1vw rgba(255, 255, 255, 0.6);
+	-webkit-box-shadow: 2vw 2vw 5vw 1vw rgba(0, 0, 0, 0.657), inset 2vw 2vw 5vw 1vw rgba(255, 255, 255, 0.6), inset -2vw -2vw 5vw 1vw rgba(255, 255, 255, 0.6);
+	        box-shadow: 2vw 2vw 5vw 1vw rgba(0, 0, 0, 0.657), inset 2vw 2vw 5vw 1vw rgba(255, 255, 255, 0.6), inset -2vw -2vw 5vw 1vw rgba(255, 255, 255, 0.6);
 	padding: 5vw
 }
 
@@ -146,6 +189,8 @@
 
 .visible {
 	opacity: 1;
+	-webkit-transition: opacity 1s ease, left 2s ease, right 2s ease;
+	-o-transition: opacity 1s ease, left 2s ease, right 2s ease;
 	transition: opacity 1s ease, left 2s ease, right 2s ease;
 }
 
@@ -184,11 +229,13 @@
 }
 
 * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 *::before, *::after {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 button {
@@ -210,7 +257,10 @@ button.big-button {
 	border: 2px solid var(--colorShadeA);
 	border-radius: 1em;
 	background: var(--colorShadeE);
-	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: all 175ms cubic-bezier(0, 0, 1, 1);
+	-o-transition: all 175ms cubic-bezier(0, 0, 1, 1);
 	transition: all 175ms cubic-bezier(0, 0, 1, 1);
 }
 
@@ -225,29 +275,41 @@ button.big-button::before {
 	bottom: 0;
 	background: var(--colorShadeC);
 	border-radius: inherit;
-	box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
-	transform: translate3d(0, 0.75em, -1em);
+	-webkit-box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+	        box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+	-webkit-transform: translate3d(0, 0.75em, -1em);
+	        transform: translate3d(0, 0.75em, -1em);
+	-webkit-transition: all 175ms cubic-bezier(0, 0, 1, 1);
+	-o-transition: all 175ms cubic-bezier(0, 0, 1, 1);
 	transition: all 175ms cubic-bezier(0, 0, 1, 1);
 }
 
 
 button.big-button:hover {
 	background: var(--colorShadeD);
-	transform: translate(0, 0.375em);
+	-webkit-transform: translate(0, 0.375em);
+	    -ms-transform: translate(0, 0.375em);
+	        transform: translate(0, 0.375em);
 }
 
 button.big-button:hover::before {
-	transform: translate3d(0, 0.75em, -1em);
+	-webkit-transform: translate3d(0, 0.75em, -1em);
+	        transform: translate3d(0, 0.75em, -1em);
 }
 
 button.big-button:active {
-	transform: translate(0em, 0.75em);
+	-webkit-transform: translate(0em, 0.75em);
+	    -ms-transform: translate(0em, 0.75em);
+	        transform: translate(0em, 0.75em);
 }
 
 button.big-button:active::before {
-	transform: translate3d(0, 0, -1em);
+	-webkit-transform: translate3d(0, 0, -1em);
+	        transform: translate3d(0, 0, -1em);
 
-	box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+	-webkit-box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+
+	        box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
 
 }
 
@@ -258,9 +320,15 @@ button.big-button:active::before {
 #tool {
 	width: 100%;
 	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	color: white;
 	font-family: "Seaweed Script";
 	font-size: 5vh;
@@ -286,6 +354,7 @@ button.big-button:active::before {
 	width: 0%;
 	height: 100%;
 	background: greenyellow;
+	background: -o-repeating-linear-gradient(135deg, greenyellow, greenyellow 15px, pink 15px, pink 30px);
 	background: repeating-linear-gradient(-45deg, greenyellow, greenyellow 15px, pink 15px, pink 30px);
 }
 
