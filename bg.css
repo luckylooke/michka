@@ -8,11 +8,12 @@ body {
 }
 
 .overlay {
+	pointer-events: none;
 	width: 100vw;
 	height: 100vh;
 	position: absolute;
 	z-index: 2;
-	background: radial-gradient(circle, transparent 0%, rgba(98, 35, 210, 0.85) 100%);
+	background: radial-gradient(circle, transparent 0%, rgba(255, 89, 205, 0.493) 100%);
 }
 
 .container {
