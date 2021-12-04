@@ -5,6 +5,11 @@
 * Browsers: last 4 version
 */
 
+#main>.container {
+    width: 100%;
+    overflow: hidden;
+}
+
 .content-wrap {
 	position: fixed;
 	top: 0;
@@ -220,11 +225,11 @@
 /* -------------------------------------------------------------------------------------- */
 
 :root {
-	--backgroundColor: rgba(246, 241, 209);
-	--colorShadeA: rgb(106, 163, 137);
-	--colorShadeB: rgb(121, 186, 156);
-	--colorShadeC: rgb(150, 232, 195);
-	--colorShadeD: rgb(187, 232, 211);
+	--backgroundColor: transparent;
+	--colorShadeA: rgb(0, 167, 78);
+	--colorShadeB: rgb(24, 255, 147);
+	--colorShadeC: rgb(115, 255, 192);
+	--colorShadeD: rgb(211, 255, 234);
 	--colorShadeE: rgb(205, 255, 232);
 }
 
@@ -253,6 +258,9 @@ button {
 }
 
 button.big-button {
+	font-size: 3vw;
+	max-width: 100%;
+	word-break: break-word;
 	padding: 1em 2em;
 	border: 2px solid var(--colorShadeA);
 	border-radius: 1em;
