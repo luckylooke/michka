@@ -16,6 +16,41 @@ body {
 	background: radial-gradient(circle, transparent 0%, rgba(255, 89, 205, 0.493) 100%);
 }
 
+.star {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  overflow: hidden;
+  z-index: 2;
+	font-size: 6vw;
+  animation: glitter 2s linear 0s infinite normal;
+}
+
+@keyframes glitter {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .container {
 	display: grid;
 	grid-template-columns: repeat(10, 200px);
